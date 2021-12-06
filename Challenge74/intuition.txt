@@ -1,0 +1,32 @@
+2 3 1 -4 -4 2
+
+1. Take each number as the starting point ie
+first starting point will be 0  index then 1 index and so on
+
+2. move forwards and backwards based on the value, 
+keep track of whether that value has been crossed or not
+
+3. If a value that has been passed comes again then break
+
+4. If all the values are have been crossed once then output 
+True.
+
+in the case of
+-9 1 8 9
+
+
+num_steps_to_move=
+curr_value - len(arr)(4)*  (curr_value//len(arr)
+
+
+if num_steps_to_move is negative then do curr_idx +num_steps_to_move(will be negative)
+
+if num_steps_to_move is positive then 
+check if the curr_idx + num_steps_to_move exceeds the len(arr) if it doesnt then do curr_idx+
+steps_to_move, if it does exceed then do
+
+
+number_of_steps_to_move - (len(arr) - idx_of_curr_element)
+
+
+4 10 10 1

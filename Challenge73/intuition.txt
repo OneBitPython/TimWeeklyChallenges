@@ -1,0 +1,93 @@
+find the position of mr HETHAT, I used coordinate geometry
+and stored his position like he is on a cartition plane
+the rows start from 0(0 is lobby) and the columns start from 1
+so the first lobby(top left) will be (0,1)
+
+1. Find out distance of each trash bin(1) from
+the number 2
+
+#for each distance to reach trash bin,you
+will need two distances, the longer route and
+shorter route
+
+##How to do it (two methods)- 
+
+Method 1 - hethat and trash are on different rows
+eg:=
+000000
+000010
+000000
+000000
+000020
+
+coordhethat = (5,5)
+coordtrashbin = (2,5)
+
+first route - 
+abs(difference in abcissa)+ (len(arr[0])-ordinate1coord)+
+(len(arr[0])-ordinate2coord)
+
+=3+1+1
+=5
+
+second route - 
+abs(difference in abcissa)+abs(1-ordinate1coord)
+                          +abs(1-ordinate2coord)
+
+=3+4+4
+=11
+
+
+
+Method2 - hethat and trash are on same rows
+distance = abs(hethat[abcissa]-trash[abcissa, abs(hethat[ordinate])
+                                              -abs(trash[ordinate])
+########################################################
+
+2. Next you will have to find the distance of each trash bin
+to the lobby. To do this just do - 
+abs(trash[0]-lobby[0])+abs(trash[1]-lobby[1]))
+
+L = the lobby will be the nearest lobby to the left, so in
+00010
+20000
+
+trash=(1,4)
+lobby=(1,0)
+using the formula, its 0+4, so dist = 4
+
+the nearest lobby to the left of trash bin 1 is the same row
+left corner, so (1, 0)
+
+
+D - the two lobbies will be -
+([(len(arr)+1,1),(len(arr)+1,len(arr[0]))]
+
+U - the two lobbies will be- 
+[(0,1),(0,len(arr[0]))]
+Take the minimum value of the trash bin to the lobby, as 
+in the case of U and D, there are two lobbies.
+
+##################################################
+3. Now append the values to a list m
+the values to be appended are a list of- 
+
+d1=distance-from-hethatcoord-to-trash(calculated using 1st method)
+d2 = distance-from-hethatcoord-to-trash(calculated using 2nd method)
+t1 = distance_from_trash_can_to_respective_lobby(2nd step)
+
+[min(d1+t1,d2+t1), min(d1,d2)]
+
+adding the second value'min(d1,d2)' as that will be the 
+value to be outputed after some calculations
+#################################################
+4. Now we have an array m, just do-
+print(min(m,key=lambda x:(x[0], x[1]))[1])
+basically the least value in m based on min(d1+t1,d2+t1) if
+min(d1+t1,d2+t1) is the same in many cases, take the minimum
+value of min(d1,d2). Finally index the first index of the
+outputed minimum value
+
+
+
+NOTE : I changed some vars in my final code

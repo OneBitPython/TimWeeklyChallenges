@@ -1,0 +1,1 @@
+nt j=0;j<t.size();++j){v=t[j]^k;cout<<v;}cout<<endl;}}
