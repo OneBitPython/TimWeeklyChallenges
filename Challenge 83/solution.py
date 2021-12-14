@@ -1,0 +1,1 @@
+for i in[I:=input]*int(I()):print(*[v[1:]+v[0]+"ay"for v in I().split()])
