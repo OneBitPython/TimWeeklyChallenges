@@ -1,0 +1,1 @@
+for i in[I:=input]*int(I()):n,e=I(),float(I());print(int(-(-sum(map(int,I().split()))*e//5)*5))
