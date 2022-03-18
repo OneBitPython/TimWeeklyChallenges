@@ -78,7 +78,7 @@ class Config:
     # Name of file with inputs test cases (and output if SEP_INP_OUT_TESTCASE_FILE is False)
     # If test cases file is compressed, you don't need to extract it, just give name of
     # compressed file (with .gz extension)
-    TEST_CASE_FILE = "cases.json"
+    TEST_CASE_FILE = "test_cases.json"
 
     # If test cases input and expected output are in separate files, name of file
     # with expected outputs for test cases. Empty string - if they in one file.
